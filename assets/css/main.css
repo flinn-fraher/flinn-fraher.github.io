@@ -7,6 +7,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*Main colour variables*/
+:root{
+	--LIGHT_SHADOWS: #F5F3EF;
+	--LIGHT_ACCENT: #989686;
+	--MAIN_COLOR: #C7974F;
+	--DARK_ACCENT: #BE6338;
+	--DARK_SHADOWS: #202426;
+}
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1306,7 +1317,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-image: url("images/overlay.png"), url("images/Accent-BG.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		background-attachment: fixed;
@@ -1327,7 +1338,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		color: #777777;
+		color:var(--LIGHT_ACCENT);
 		font-size: 20pt;
 		line-height: 1.75em;
 	}
@@ -1366,7 +1377,7 @@ input, select, textarea {
 
 	strong, b, h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #363636;
+		color: var(--DARK_ACCENT);
 	}
 
 	h1 {
@@ -1533,7 +1544,7 @@ input, select, textarea {
 
 		header > p {
 			margin: 0.5em 0 0 0;
-			color: #aaa;
+			color:--light;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -1778,7 +1789,7 @@ input, select, textarea {
 		#nav a {
 			position: relative;
 			display: inline-block;
-			color: #ffffff;
+			color: #000;
 			width: 1em;
 			height: 1em;
 			line-height: 0.9em;
@@ -1807,7 +1818,7 @@ input, select, textarea {
 				left: 50%;
 				bottom: -0.75em;
 				margin-left: -0.5em;
-				border-bottom: solid 0em #ffffff;
+				border-bottom: solid 0em var(--DARK_SHADOWS);
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
 				-moz-transition: border-bottom-width .25s ease-in-out;
@@ -1947,8 +1958,8 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #ffffff;
-		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+		background: var(--DARK_SHADOWS);
+		box-shadow: 0px 1px 0px 0px rgba(var(--DARK_SHADOWS));
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -1980,7 +1991,7 @@ input, select, textarea {
 
 			#main > .panel.intro {
 				padding: 0;
-				height: 20em;
+				height: 50em;
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;
@@ -1992,7 +2003,7 @@ input, select, textarea {
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
-				align-items: center;
+				align-items: start;
 			}
 
 				#main > .panel.intro .pic {
@@ -2006,7 +2017,7 @@ input, select, textarea {
 					-webkit-flex-shrink: 0;
 					-ms-flex-shrink: 0;
 					flex-shrink: 0;
-					width: 17em;
+					width: 3cm;
 					height: 100%;
 				}
 
@@ -2049,7 +2060,7 @@ input, select, textarea {
 						height: 2.75em;
 						background: #000;
 						background: rgba(0, 0, 0, 0.75);
-						color: #ffffff;
+						color: var(--LIGHT_ACCENT);
 						text-align: center;
 						line-height: 2.75em;
 						font-size: 1.5em;
