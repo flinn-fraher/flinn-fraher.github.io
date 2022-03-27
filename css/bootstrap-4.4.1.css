@@ -39,7 +39,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
 }
+
+
+
+
+
+
 
 html {
   font-family: sans-serif;
@@ -194,6 +201,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+		object-fit:cover;
 }
 
 svg {
@@ -387,8 +395,9 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #999999;
 }
 
 .display-1 {
@@ -398,9 +407,9 @@ h6, .h6 {
 }
 
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+    font-size: 5.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 .display-3 {
@@ -539,6 +548,17 @@ pre code {
   font-size: inherit;
   color: inherit;
   word-break: normal;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .pre-scrollable {
@@ -6866,7 +6886,7 @@ button.bg-dark:focus {
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 1.25rem !important;
 }
 
 .rounded-top {
