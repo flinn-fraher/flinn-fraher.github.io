@@ -1,81 +1,75 @@
 <!DOCTYPE html>
-
-
-
 <style>
-	.slideanim {visibility:hidden;}
+.slideanim {
+    visibility: hidden;
+}
 .slide {
-  /* The name of the animation */
-  animation-name: slide;
-  -webkit-animation-name: slide;
-  /* The duration of the animation */
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  /* Make the element visible */
-  visibility: visible;
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
 }
 
 /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
 @keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+0% {
+opacity: 0;
+transform: translateY(70%);
+}
+100% {
+opacity: 1;
+transform: translateY(0%);
+}
 }
 @-webkit-keyframes slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-  }
+0% {
+opacity: 0;
+-webkit-transform: translateY(70%);
 }
-	
-	
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
 header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
 }
-
 header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: absolute;
-  height: absolute;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: absolute;
+    height: absolute;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
-
 header .container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
-
 header .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 /* Media Query for devices withi coarse pointers and no hover functionality */
@@ -83,273 +77,335 @@ header .overlay {
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
 
 @media (pointer: coarse) and (hover: none) {
-  header {
+header {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-
-  header video {
+}
+header video {
     display: none;
-  }
+}
 }
 </style>
-
 <script>
 	function ScrollToProjects()
 	{
 		document.getElementById('projects').scrollIntoView({block: 'start', behavior: 'smooth'});
 	}
 </script>
-
-
 <html lang="en">
-	<!--Nav Bar-->
-	
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Flinn</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-        <li class="nav-item"> <a class="nav-link ms-3" href="javascript::javascript:void(0)" onClick="ScrollToProjects()">Projects</a> </li>
-		<li class="nav-item"> <a class="nav-link" href="#">About Me</a> </li>
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
-			  <a class="dropdown-item" href="https://twitter.com/flinn_fraher" target="_blank" rel="noopener noreferrer">Twitter</a> 
-			  <a class="dropdown-item" href="https://www.linkedin.com/in/flinn-fraher-927045186/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
-			  <a class="dropdown-item" href="mailto:flinn.fraher@gmail.com">Email</a>
-			  <a class="dropdown-item" href="https://github.com/flinn-fraher" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">CV</a> </div>
-        </li>
-      </ul>
-    </div>
-</nav>
-	
-	
-<head>
-	<meta name="author" content="Flinn Fraher">
-	<meta name="image" property="og:image" content="images/Thumbnail.png">
-	<meta property="og:type" content="Portfolio">
-	<meta property="og:title" content="Flinn Fraher - Portfolio">
-	<meta name="keywords" content="Flinn Fraher, Programmer, Game Developer, Games Technical Designer, Games Tech, Designer, UK, England, Staffordshire University, Games">
-	<meta property="og:description" content="Flinn Fraher is a technical games designer, based in the UK. This site contains Flinn's portfolio of work and contact information.">
-	<meta property="description" content="Flinn Fraher is a technical games designer, based in the UK. This site contains Flinn's portfolio of work and contact information.">
-	
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flinn Fraher - Portfolio</title>
-    <!-- Bootstrap -->
-	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-	
-  </head>
-<header>
-  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-  <div class="overlay"></div>
+<!--Nav Bar-->
 
-  <!-- The HTML5 video element that will create the background video on the header -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="#">Flinn</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link ms-3" href="javascript::javascript:void(0)" onClick="ScrollToProjects()">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown1"><a class="dropdown-item" href="https://twitter.com/flinn_fraher" target="_blank" rel="noopener noreferrer">Twitter</a><a class="dropdown-item" href="https://www.linkedin.com/in/flinn-fraher-927045186/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="dropdown-item" href="mailto:flinn.fraher@gmail.com">Email</a><a class="dropdown-item" href="https://github.com/flinn-fraher" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">CV</a></div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<head>
+
+<!--Meta tags-->
+<meta name="author" content="Flinn Fraher">
+<meta name="image" property="og:image" content="images/Thumbnail.png">
+<meta property="og:type" content="Portfolio">
+<meta property="og:title" content="Flinn Fraher - Portfolio">
+<meta name="keywords" content="Flinn Fraher, Programmer, Game Developer, Games Technical Designer, Games Tech, Designer, UK, England, Staffordshire University, Games">
+<meta property="og:description" content="Flinn Fraher is a technical games designer, based in the UK. This site contains Flinn's portfolio of work and contact information.">
+<meta property="description" content="Flinn Fraher is a technical games designer, based in the UK. This site contains Flinn's portfolio of work and contact information.">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Flinn Fraher - Portfolio</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	
+</head>
+	
+<header>
+	
+  <div class="overlay"></div>
+  
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="videos/Showreel.mp4" type="video/mp4">
   </video>
-
-  <!-- The header content -->
+  
   <div class="container h-100">
     <div class="d-flex h-100 text-center align-items-center">
-      <!--<div class="w-100 text-white">-->
-		<div class="container" style="color: whitesmoke">    
-			<h4 class="display-2 text-center">Flinn Fraher</h4>
-        	<p class="lead mb-0">Technical Games Designer</p>
-		</div>
-      <!--</div>-->
+      <div class="container" style="color: whitesmoke">
+        <h4 class="display-2 text-center">Flinn Fraher</h4>
+        <p class="lead mb-0">Technical Games Designer</p>
+      </div>
     </div>
   </div>
 </header>
-	
-  <body>
-	  
 
-	  
-  <hr class="my-4">
-  <div class="container-fluid">
-	    <h1 class="display-3 text-center">About</h1>
-    <div class="container">
-      <p class="lead text-center">Hello! I'm Flinn Fraher, a techncial games designer with strong programming and scripting skills.
-           <br>
-           I'm currently in my final year at Staffordshire University, studying Games Design and Programming.
-		   <br>
-      	   On this site you can see the projects I've been lucky enough to contribute to, as well as personal projects done in my own time, and for university assignments.</p>
-    </div>
-</div>
-	  
-  	<!-- body code goes here -->
+<body>
 <hr class="my-4">
-  <div class="container-fluid">
-    <h1 class="display-3 text-center" id="projects">Portfolio</h1>
-	    <hr class="my-4">
-	  <!--Portfolio Projects-->
-    <div class="container">
-		
-	  <div class="row" style = "padding-bottom: 20px; padding-top:40px">
-
-	  	<div class="col-sm"><img src="images/Sovereign-logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-		
-	<span class="badge badge-success float-left">Unreal Engine 4</span>
-	<span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">Sovereign</h3>
-        <p class="card-text text-left">Sovereign is a top-down roguelike ARPG developed by myself, and a team of students during my second year at Staffordshire University. The gameplay takes inspiration from Diablo, and features three full class systems with unique abilities for each.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left"><li>Three class types, each with a unique skill tree and abilities</li>
-		  <li>Persistent, and per-character inventory systems</li>
-			<li>Experience/Levelling system linked to the character skill tree</li>
-	    </ul>
-	    </div>
-	  </div>
-		
-		<div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/Case-Closed-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-	<span class="badge badge-success float-left">Unreal Engine 4</span>
-	<span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span>
-	<span class="badge badge-warning float-left" style="margin-left:10px">C++</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">Case Closed</h3>
-        <p class="card-text text-left">Case Closed is a vertical slice of a point-and-click puzzle game. It was created to demonstrate the point-and-click framework I created inside Unreal Engine.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>Editor tools for room boundary creation using procedural meshes</li>
-		  <li>Advanced camera manager - transition between area cameras dynamically adjusted to level geometry</li>
-		  <li>Serialized gameplay objective system</li>
-		  <li>Behaviour tree-driven dialogue system, with editor tools</li>
-	    </ul>
-	    </div>
-	  </div>
-		
-		
-				<div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/Mario-Clone-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-	<span class="badge badge-dark float-left" style="margin-left:10px">SDL</span>
-	<span class="badge badge-warning float-left" style="margin-left:10px">C++</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">SDL Mario Maker</h3>
-        <p class="card-text text-left">2D Mario clone with a serialized map editor. Created for my first year Games Engine Creation module at University, using C++ and the Simple Direct Media Library (SDL)</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>AABB Collision between gameplay objects</li>
-		  <li>Custom UI layer with text renderer</li>
-		  <li>Serialized maps from the in-game editor</li>
-		  <li>Ability to play created maps in play-mode</li>
-		  <li>Two enemy types</li>
-	    </ul>
-	    </div>
-	  </div>
-		
-		
-	  <div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/Short-Stories-Logo.jpg" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-	<span class="badge badge-success float-left">Unreal Engine 4</span>
-	<span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">Short Stories</h3>
-        <p class="card-text text-left">Short stories was an entry to the Summer Slow Jam 2021 from myself and two of my friends. Taking place in a series of differently genred books, each level was designed by one of our team in an attempt to make as much varied gameplay as possible in the week we had to develop the game.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>Multiple varied levels, taking place in differently themed environments</li>
-		  <li>IK-driven interaction system</li>
-		  <li>Modular puzzle framework, with visual feedback from niagara systems</li>
-		</ul>
-	    </div>
-	  </div>
-		
-		
-						<div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/Bigger-Picture-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-	<span class="badge badge-secondary float-left">Unity</span>
-	<span class="badge badge-danger float-left" style="margin-left:10px">C#</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">The Bigger Picture</h3>
-        <p class="card-text text-left">The Bigger Picture is a 2D puzzle-platformer taking place in a 3D environment. Tasked with moving a 2D player around rooms projected onto various surfaces in a 3D environment, they must access the office's server computer, and free themselves from the confines of the building's walls.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>Event-driven camera management system, using spline paths to move around</li>
-		  <li>Room connection system, with design tools to make room connection easier</li>
-		  <li>Diagetic UI elements, with easy editability via editor exposed parameters</li>
-		</ul>
-	    </div>
-	  </div>
-		
-		
-							<div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/LastTemplar-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-		<span class="badge badge-success float-left">Unreal Engine 4</span>
-	<span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">The Last Templar</h3>
-        <p class="card-text text-left">This metroidvania-RPG features a full equipment and inventory system, three unique boss fights, alongside various traps and interactables to provide a suitable challenge and enough mechanical variety to create emergent gameplay.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>Character equipment screen &amp; inventory system</li>
-		  <li>Levelling manager, with ability selection choices upon levelling up</li>
-		  <li>Three unique boss fights</li>
-		</ul>
-	    </div>
-	  </div>
-		
-		
-			
-	  <div class="row" style = "padding-bottom: 20px; padding-top:40px">
-	  	<div class="col-sm"><img src="images/UT-CTF-Map.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
-<div class="col-sm-8 text-center" style="padding-top:20px;">
-	
-	<div class="container">
-		<span class="badge badge-success float-left">Unreal Engine 4</span>
-	</div>
-
-<h3 class="card-title" style="margin-top:20px">Unreal Tournament CTF Map</h3>
-        <p class="card-text text-left">During my first year of University, the creation of this capture the flag map for Unreal Tournament served as my introduction to the Unreal Engine 4 editor.</p>
-		<h5 class="text-left">Features:</h5>
-		<ul class="text-left">
-		  <li>Detailed level design documentation</li>
-		  <li>UT Bot support</li>
-		</ul>
-	    </div>
-	  </div>
-		
-		
-	  </div>
+<div class="container-fluid">
+  <h1 class="display-3 text-center">About</h1>
+  <div class="container">
+    <p class="lead text-center">Hello! I'm Flinn Fraher, a techncial games designer with strong programming and scripting skills. <br>
+      I'm currently in my final year at Staffordshire University, studying Games Design and Programming. <br>
+      On this site you can see the projects I've been lucky enough to contribute to, as well as personal projects done in my own time, and for university assignments.</p>
+  </div>
 </div>
-	  
-	 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="js/jquery-3.4.1.min.js"></script>
+<hr class="my-4">
+<div class="container-fluid">
+  <h1 class="display-3 text-center" id="projects">Portfolio</h1>
+  <hr class="my-4">
+  <!--Portfolio Projects-->
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper.min.js"></script> 
-  <script src="js/bootstrap-4.4.1.js"></script>
+	
+  <div class="container">
+    <div class="row"  style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/Sovereign-logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+		  
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> <span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">Sovereign</h3>
+        <p class="card-text text-left">Sovereign is a top-down roguelike ARPG developed by myself, and a team of students during my second year at Staffordshire University. The gameplay takes inspiration from Diablo, and features three full class systems with unique abilities for each.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Three class types, each with a unique skill tree and abilities</li>
+          <li>Persistent, and per-character inventory systems</li>
+          <li>Experience/Levelling system linked to the character skill tree</li>
+        </ul>
+		  <div id="accordion1" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingOne1">
+              <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1" role="button" aria-expanded="false" aria-controls="collapseOne1"> More Info </a> </h5>
+            </div>
+            <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordion1">
+              <div class="card-body">
+				<h5 class="text-left">What I Learned:</h5>
+				  <p class = "text-left">Development of this project took place during my junior collaborative games development &amp; testing module, with a team of 17 people from different disciplines.
+				  As this was the largest team I've ever worked with, I found myself inially worried that communication and task management would be an issue. However, thanks to quick task allocation on JIRA during
+				  daily meetings with each disciplines seniors, and a constant flow of communication via a teams group, progress on the project was much quicker than I initially anticipated. 
+				  </p><p class="text-left">I found myself quickly becoming
+				  familiar with how to use JIRA effectively, breaking down allocated tasks into sub-tasks to complete throughout the day and posting demonstrative videos alongside completed issues. Having a senior to ask for
+				  help or the best way to approach a problem was also something new to me - I found it incredibly helpful to have someone knowledgeable to discuss ideas with before implementing them, as we'd often realise a
+				  better approach to problems when reflecting on them as a team.</p>
+				  <p class ="text-left"></p>
+				<h5 class="text-left">Links:</h5>
+				  
+			  </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row" onClick="OnDropdownProject(this)" onMouseOver="OnMouseEnterProject(this)" onMouseOut="OnMouseLeaveProject(this)" style = "padding:20px">
+			  
+      <div class="col-sm"><img src="images/Case-Closed-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> <span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span> <span class="badge badge-warning float-left" style="margin-left:10px">C++</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">Case Closed</h3>
+        <p class="card-text text-left">Case Closed is a vertical slice of a point-and-click puzzle game. It was created to demonstrate the point-and-click framework I created inside Unreal Engine.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Editor tools for room boundary creation using procedural meshes</li>
+          <li>Advanced camera manager - transition between area cameras dynamically adjusted to level geometry</li>
+          <li>Serialized gameplay objective system</li>
+          <li>Behaviour tree-driven dialogue system, with editor tools</li>
+        </ul>
+        <div id="accordion2" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo1">
+              <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseTwo1" role="button" aria-expanded="false" aria-controls="collapseTwo1"> More Info </a> </h5>
+            </div>
+            <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordion2">
+              <div class="card-body">
+				<h5 class="text-left">What I Learned:</h5>
+				  <p class = "text-left">Working on this project gave me a much greater appreciation of the role of a technical designer within a team. Making my own tools to use within the engine,
+				  I found myself taking much greater care when designing core systems for the game. Having these editor utilities made development of the vertical slice much easier,
+					  allowing me to fit much more content in the final game than I'd originally planned to without additional time.</p>
+				  <p class = "text-left">Developing this project on my own, I had to create some of the environmental assets used myself where an appropiate asset pack couldn't be sourced.
+				  This greatly increased my knowledge of the 3D modelling and animation pipelines involved when working with Unreal Engine, and was a beneficial experience as a technical designer.</p>
+				  <p class ="text-left"></p>
+				<h5 class="text-left">Links:</h5>
+				  
+			  </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+				
+    </div>
 	  
+    <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/Mario-Clone-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-dark float-left" style="margin-left:10px">SDL</span> <span class="badge badge-warning float-left" style="margin-left:10px">C++</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">SDL Mario Maker</h3>
+        <p class="card-text text-left">2D Mario clone with a serialized map editor. Created for my first year Games Engine Creation module at University, using C++ and the Simple Direct Media Library (SDL)</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>AABB Collision between gameplay objects</li>
+          <li>Custom UI layer with text renderer</li>
+          <li>Serialized maps from the in-game editor</li>
+          <li>Ability to play created maps in play-mode</li>
+          <li>Two enemy types</li>
+        </ul>
+	    <div id="accordion3" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne2">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2" role="button" aria-expanded="false" aria-controls="collapseOne2">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne2" class="collapse" role="tabpanel" aria-labelledby="headingOne2" data-parent="#accordion3">
+		        <div class="card-body">
+				  <h5 class="text-left">What I Learned:</h5>
+				  <p class="text-left">The development of this game was my first experience working with C++ combined with a separate library. Utilising SDL and creating the framework for this game gave me a much greater understanding of game engine architecture, and the concepts involved when working with a graphics library. I spent a lot of my time during development reading the documentation of SDL, and had a much better overall understanding of C++ and general programming concepts by the end of the development cycle which really helped me when I began learning C++ for Unreal Engine.</p>
+				  <p class="text-left">An aspect of games engines that this project didn't cover is 3D rendering and further rasterisation concepts, which is something I'd love to look into. I'd like to make a project in the future which utilises SDL, and OpenGL, Vulkan, or another graphics API and take my low-level understanding of engines further when I get the time.</p>
+				  <h5 class="text-left">Links:</h5>
+				  </div>
+	          </div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+	  
+    <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/Short-Stories-Logo.jpg" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center;"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> <span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">Short Stories</h3>
+        <p class="card-text text-left">Short stories was an entry to the Summer Slow Jam 2021 from myself and two of my friends. Taking place in a series of differently genred books, each level was designed by one of our team in an attempt to make as much varied gameplay as possible in the week we had to develop the game.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Multiple varied levels, taking place in differently themed environments</li>
+          <li>IK-driven interaction system</li>
+          <li>Modular puzzle framework, with visual feedback from niagara systems</li>
+        </ul>
+	    <div id="accordion4" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne3">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3" role="button" aria-expanded="false" aria-controls="collapseOne3">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne3" class="collapse" role="tabpanel" aria-labelledby="headingOne3" data-parent="#accordion4">
+		        <div class="card-body">
+				  <h5 class="text-left">What I Learned:</h5>
+					
+				  <h5 class="text-left">Links:</h5>
+				  </div>
+	          </div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+	  
+    <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/Bigger-Picture-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-secondary float-left">Unity</span> <span class="badge badge-danger float-left" style="margin-left:10px">C#</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">The Bigger Picture</h3>
+        <p class="card-text text-left">The Bigger Picture is a 2D puzzle-platformer taking place in a 3D environment. Tasked with moving a 2D player around rooms projected onto various surfaces in a 3D environment, they must access the office's server computer, and free themselves from the confines of the building's walls.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Event-driven camera management system, using spline paths to move around</li>
+          <li>Room connection system, with design tools to make room connection easier</li>
+          <li>Diagetic UI elements, with easy editability via editor exposed parameters</li>
+        </ul>
+	    <div id="accordion5" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne4">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne4" role="button" aria-expanded="false" aria-controls="collapseOne4">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne4" class="collapse" role="tabpanel" aria-labelledby="headingOne4" data-parent="#accordion5">
+		        <div class="card-body">
+					<h5 class="text-left">What I Learned:</h5>
+					
+				  <h5 class="text-left">Links:</h5></div>
+	          </div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+	  
+    <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/LastTemplar-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> <span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">The Last Templar</h3>
+        <p class="card-text text-left">This metroidvania-RPG features a full equipment and inventory system, three unique boss fights, alongside various traps and interactables to provide a suitable challenge and enough mechanical variety to create emergent gameplay.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Character equipment screen &amp; inventory system</li>
+          <li>Levelling manager, with ability selection choices upon levelling up</li>
+          <li>Three unique boss fights</li>
+        </ul>
+		  
+	    <div id="accordion6" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne5">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne5" role="button" aria-expanded="false" aria-controls="collapseOne5">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne5" class="collapse" role="tabpanel" aria-labelledby="headingOne5" data-parent="#accordion6">
+		        <div class="card-body">
+					<h5 class="text-left">What I Learned:</h5>
+					
+				  <h5 class="text-left">Links:</h5></div>
+	          </div>
+	      </div>
+		    
+	    </div>
+      </div>
+    </div>
+	  
+    <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/UT-CTF-Map.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">Unreal Tournament CTF Map</h3>
+        <p class="card-text text-left">During my first year of University, the creation of this capture the flag map for Unreal Tournament served as my introduction to the Unreal Engine 4 editor.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Detailed level design documentation</li>
+          <li>UT Bot support</li>
+        </ul>
+	    <div id="accordion7" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne6">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne6" role="button" aria-expanded="true" aria-controls="collapseOne6">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne6" class="collapse show" role="tabpanel" aria-labelledby="headingOne6" data-parent="#accordion7">
+		        <div class="card-body">
+					<h5 class="text-left">What I Learned:</h5>
+					
+				  <h5 class="text-left">Links:</h5></div>
+	          </div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<script src="js/project-dropdowns.js"></script>
 <script>
 $(window).scroll(function() {
   $(".slideanim").each(function(){
@@ -362,9 +418,8 @@ $(window).scroll(function() {
   });
 });
 </script>
-	  
-  </body>
 	
+</body>
 <footer class="container-fluid text-center" style="padding:150px">
   <p>Flinn Fraher 2022</p>
 </footer>
