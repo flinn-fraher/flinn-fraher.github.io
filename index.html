@@ -93,6 +93,12 @@ header .overlay {
 }
 </style>
 
+<script>
+	function ScrollToProjects()
+	{
+		document.getElementById('projects').scrollIntoView({block: 'start', behavior: 'smooth'});
+	}
+</script>
 
 
 <html lang="en">
@@ -103,7 +109,7 @@ header .overlay {
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link ms-3" href="javascript::javascript:void(0)" onClick="ScrollToProjects()">Projects</a> </li>
 		<li class="nav-item"> <a class="nav-link" href="#">About Me</a> </li>
         <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Contact </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> 
@@ -169,7 +175,7 @@ header .overlay {
   	<!-- body code goes here -->
 <hr class="my-4">
   <div class="container-fluid">
-    <h1 class="display-3 text-center">Portfolio</h1>
+    <h1 class="display-3 text-center" id="projects">Portfolio</h1>
 	    <hr class="my-4">
 	  <!--Portfolio Projects-->
     <div class="container">
