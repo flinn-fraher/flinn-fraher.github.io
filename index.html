@@ -111,9 +111,11 @@ header video {
 </nav>
 <head>
 
-<!--Meta tags-->
+<!--Google Meta Tags-->
 <meta name="google-site-verification" content="0juX_-Ig7wTgphjn3aBzEqc6DEkNVAVnORvRrfr-z9s" />
-
+	
+	
+<!--Meta tags-->
 <meta name="author" content="Flinn Fraher">
 <meta name="image" property="og:image" content="images/Thumbnail.png">
 <meta property="og:type" content="Portfolio">
@@ -198,9 +200,16 @@ header video {
 				  familiar with how to use JIRA effectively, breaking down allocated tasks into sub-tasks to complete throughout the day and posting demonstrative videos alongside completed issues. Having a senior to ask for
 				  help or the best way to approach a problem was also something new to me - I found it incredibly helpful to have someone knowledgeable to discuss ideas with before implementing them, as we'd often realise a
 				  better approach to problems when reflecting on them as a team.</p>
-				  <p class ="text-left"></p>
+				  <h5 class="text-left">My Contributions</h5>
+				  <ul class="text-left">
+					  <li>Inventory/Item system</li>
+					  <li>Skill tree framework</li>
+					  <li>Dialogue System</li>
+					  <li>Player HUD &amp; other UI logic</li>
+				  </ul>
 				<h5 class="text-left">Links:</h5>
-				  
+				  <a href="https://lee-griffith.itch.io/sovereign" target="_blank" rel="noopener noreferrer">Itch Page</a><br>
+				  <a href="https://www.youtube.com/watch?v=UO3GvvHvtos" target="_blank" rel="noopener noreferrer">Trailer</a>
 			  </div>
             </div>
           </div>
@@ -238,7 +247,8 @@ header video {
 				  This greatly increased my knowledge of the 3D modelling and animation pipelines involved when working with Unreal Engine, and was a beneficial experience as a technical designer.</p>
 				  <p class ="text-left"></p>
 				<h5 class="text-left">Links:</h5>
-				  
+				  <a href="https://youtu.be/Fi5tOln8cpQ" target="_blank" rel="noopener noreferrer">Trailer</a><br>
+				  <a href="PDFs/TDD-CaseClosed.pdf" target="_blank" rel="noopener noreferrer">Technical Design Document (WIP)</a>
 			  </div>
             </div>
           </div>
@@ -259,9 +269,8 @@ header video {
         <ul class="text-left">
           <li>AABB Collision between gameplay objects</li>
           <li>Custom UI layer with text renderer</li>
-          <li>Serialized maps from the in-game editor</li>
-          <li>Ability to play created maps in play-mode</li>
-          <li>Two enemy types</li>
+		  <li>Two enemy types</li>
+          <li>Level creation suite with serialized maps</li>
         </ul>
 	    <div id="accordion3" role="tablist">
 		    <div class="card">
@@ -274,6 +283,7 @@ header video {
 				  <p class="text-left">The development of this game was my first experience working with C++ combined with a separate library. Utilising SDL and creating the framework for this game gave me a much greater understanding of game engine architecture, and the concepts involved when working with a graphics library. I spent a lot of my time during development reading the documentation of SDL, and had a much better overall understanding of C++ and general programming concepts by the end of the development cycle which really helped me when I began learning C++ for Unreal Engine.</p>
 				  <p class="text-left">An aspect of games engines that this project didn't cover is 3D rendering and further rasterisation concepts, which is something I'd love to look into. I'd like to make a project in the future which utilises SDL, and OpenGL, Vulkan, or another graphics API and take my low-level understanding of engines further when I get the time.</p>
 				  <h5 class="text-left">Links:</h5>
+					<a href="PDFs/SDL Mario Bros - Technical Breakdown.pdf" target="_blank" rel="noopener noreferrer">Level Editor Technical Breakdown (PDF)</a>
 				  </div>
 	          </div>
 	      </div>
@@ -304,6 +314,43 @@ header video {
 				  <h5 class="text-left">What I Learned:</h5>
 					
 				  <h5 class="text-left">Links:</h5>
+					<a href="https://www.youtube.com/watch?v=wcA7hsRUxQ4" target="_blank" rel="noopener noreferrer">Trailer</a><br>
+					<a href="https://youtu.be/NouugnnMv5A" target="_blank" rel="noopener noreferrer">Gameplay Walkthrough</a>
+				  </div>
+	          </div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+	
+	  <div class="row" style = "padding-bottom: 20px; padding-top:40px">
+      <div class="col-sm"><img src="images/Bigger-Picture-Logo.png" class="rounded img-fluid slideanim" alt="Placeholder image" style="object-fit:cover; height:350px; float:center"></div>
+      <div class="col-sm-8 text-center" style="padding-top:20px;">
+        <div class="container"> <span class="badge badge-success float-left">Unreal Engine 4</span> <span class="badge badge-primary float-left" style="margin-left:10px">Blueprints/Visual Scripting</span> <span class="badge badge-warning float-left" style="margin-left:10px">C++</span> </div>
+		  <hr class="my-4">
+        <h3 class="card-title" style="margin-top:20px">Animatronics: Robot Creator</h3>
+        <p class="card-text text-left">Animatronics is a WIP character editor which utilises Unreal's control rig and procedurally animated parts, to allow a user to create and control their own robot and solve puzzles.</p>
+        <h5 class="text-left">Features:</h5>
+        <ul class="text-left">
+          <li>Entirely procedurally animated</li>
+          <li>Intuitive custom-made runtime editor for robot creation</li>
+          <li>Interaction system between robot limbs and gameplay objects</li>
+		  <li>Puzzle mechanics requiring careful robot assembly to solve</li>
+        </ul>
+	    <div id="accordion5" role="tablist">
+		    <div class="card">
+		      <div class="card-header" role="tab" id="headingOne4">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne4" role="button" aria-expanded="false" aria-controls="collapseOne4">More Info</a> </h5>
+	          </div>
+		      <div id="collapseOne4" class="collapse" role="tabpanel" aria-labelledby="headingOne4" data-parent="#accordion5">
+		        <div class="card-body">
+					<h5 class="text-left">What I Learned:</h5>
+					<p class="text-left">The Bigger Picture was developed throughout my second year of university, and was my first experience developing a larger game idea inside the Unity game engine. I quickly found that while there are some significant differences when compared to Unreal, creating a solid foundation for a projects content to work from is key. I developed the camera management system first, as utilising both a 3D and 2D camera inside the same scene was the most difficult challenge of the game programatically. </p>
+					<p class="text-left">	With the game taking place in two perspectives that had entirely different design challenges, this project tested my ability to create enjoyable levels while also creating tools to assist me in the process, an example of which was my use of a bezier curve solution to drive the 3D camera's movement in the game world. Initially, the camera would interpolate to the next 'rooms' position in 3D space in a straight line. However, this limited the layout of 3D space around the play areas, so I decided to use splines in order to specify the exact path a camera would follow when the player entered and exited an area.</p>
+					<p class="text-left">Were I to remake this project, I'd definitely utilise a separate scene for the 3D and 2D world. Towards the end of the project, I realised this would've been a much better choice to avoid problems having both in the same level was causing, however I wasn't aware this was possible inside Unity when I began. Realising this near the end of development was definitely an important lesson to me in planning and research, and projects I've worked on since have always included a preliminary R&amp;D phase as a result.</p>
+				  <h5 class="text-left">Links:</h5>
+					<a href="https://www.youtube.com/playlist?list=PLEjCIoOY5ODJROQqBwRlHcM97T-jbUv8w" target="_blank" rel="noopener noreferrer">Development Playlist</a><br>
+				  	<a href="#projects">Evaluative Project Breakdown - Coming soon</a>
 				  </div>
 	          </div>
 	      </div>
@@ -324,18 +371,22 @@ header video {
           <li>Room connection system, with design tools to make room connection easier</li>
           <li>Diagetic UI elements, with easy editability via editor exposed parameters</li>
         </ul>
-	    <div id="accordion5" role="tablist">
+	    <div id="accordion6" role="tablist">
 		    <div class="card">
-		      <div class="card-header" role="tab" id="headingOne4">
-		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne4" role="button" aria-expanded="false" aria-controls="collapseOne4">More Info</a> </h5>
+		      <div class="card-header" role="tab" id="headingOne6">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne6" role="button" aria-expanded="false" aria-controls="collapseOne6">More Info</a> </h5>
 	          </div>
-		      <div id="collapseOne4" class="collapse" role="tabpanel" aria-labelledby="headingOne4" data-parent="#accordion5">
+		      <div id="collapseOne6" class="collapse" role="tabpanel" aria-labelledby="headingOne4" data-parent="#accordion6">
 		        <div class="card-body">
 					<h5 class="text-left">What I Learned:</h5>
 					<p class="text-left">The Bigger Picture was developed throughout my second year of university, and was my first experience developing a larger game idea inside the Unity game engine. I quickly found that while there are some significant differences when compared to Unreal, creating a solid foundation for a projects content to work from is key. I developed the camera management system first, as utilising both a 3D and 2D camera inside the same scene was the most difficult challenge of the game programatically. </p>
 					<p class="text-left">	With the game taking place in two perspectives that had entirely different design challenges, this project tested my ability to create enjoyable levels while also creating tools to assist me in the process, an example of which was my use of a bezier curve solution to drive the 3D camera's movement in the game world. Initially, the camera would interpolate to the next 'rooms' position in 3D space in a straight line. However, this limited the layout of 3D space around the play areas, so I decided to use splines in order to specify the exact path a camera would follow when the player entered and exited an area.</p>
 					<p class="text-left">Were I to remake this project, I'd definitely utilise a separate scene for the 3D and 2D world. Towards the end of the project, I realised this would've been a much better choice to avoid problems having both in the same level was causing, however I wasn't aware this was possible inside Unity when I began. Realising this near the end of development was definitely an important lesson to me in planning and research, and projects I've worked on since have always included a preliminary R&amp;D phase as a result.</p>
-				  <h5 class="text-left">Links:</h5></div>
+				  <h5 class="text-left">Links:</h5>
+					<a href="https://youtu.be/Degpss22hlY" target="_blank" rel="noopener noreferrer">Elevator Pitch Video</a><br>
+				  	<a href="https://youtu.be/I_oyhz46i7k" target="_blank" rel="noopener noreferrer">Technical Breakdown Video</a><br>
+					<a href="https://youtu.be/IaB7br5PFIE" target="_blank" rel="noopener noreferrer">Gameplay Video</a>
+				  </div>
 	          </div>
 	      </div>
 	    </div>
@@ -356,16 +407,20 @@ header video {
           <li>Three unique boss fights</li>
         </ul>
 		  
-	    <div id="accordion6" role="tablist">
+	    <div id="accordion7" role="tablist">
 		    <div class="card">
 		      <div class="card-header" role="tab" id="headingOne5">
 		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne5" role="button" aria-expanded="false" aria-controls="collapseOne5">More Info</a> </h5>
 	          </div>
-		      <div id="collapseOne5" class="collapse" role="tabpanel" aria-labelledby="headingOne5" data-parent="#accordion6">
+		      <div id="collapseOne5" class="collapse" role="tabpanel" aria-labelledby="headingOne5" data-parent="#accordion7">
 		        <div class="card-body">
 					<h5 class="text-left">What I Learned:</h5>
 					
-				  <h5 class="text-left">Links:</h5></div>
+				  <h5 class="text-left">Links:</h5>
+				  <a href="PDFs/The Last Templar - GDD.pdf">Games Design Document</a><br>
+				  <a href="https://youtu.be/p0XoSkM8x9w" target="_blank" rel="noopener noreferrer">Trailer</a><br>
+				  <a href="https://youtu.be/0Z7q_Jwf7cA" target="_blank" rel="noopener noreferrer">Reflection/Walkthrough Video</a>
+				  </div>
 	          </div>
 	      </div>
 		    
@@ -385,16 +440,18 @@ header video {
           <li>Detailed level design documentation</li>
           <li>UT Bot support</li>
         </ul>
-	    <div id="accordion7" role="tablist">
+	    <div id="accordion8" role="tablist">
 		    <div class="card">
-		      <div class="card-header" role="tab" id="headingOne6">
-		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne6" role="button" aria-expanded="false" aria-controls="collapseOne6">More Info</a> </h5>
+		      <div class="card-header" role="tab" id="headingOne8">
+		        <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne8" role="button" aria-expanded="false" aria-controls="collapseOne8">More Info</a> </h5>
 	          </div>
-		      <div id="collapseOne6" class="collapse" role="tabpanel" aria-labelledby="headingOne6" data-parent="#accordion7">
+		      <div id="collapseOne8" class="collapse" role="tabpanel" aria-labelledby="headingOne8" data-parent="#accordion8">
 		        <div class="card-body">
 					<h5 class="text-left">What I Learned:</h5>
 					
-				  <h5 class="text-left">Links:</h5></div>
+				  <h5 class="text-left">Links:</h5>
+				  <a href="https://youtu.be/FajNFbuK9cY" target="_blank" rel="noopener noreferrer">Cinematic Trailer</a>
+				  </div>
 	          </div>
 	      </div>
 	    </div>
