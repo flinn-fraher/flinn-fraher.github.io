@@ -90,6 +90,10 @@ header video {
 	{
 		document.getElementById('projects').scrollIntoView({block: 'start', behavior: 'smooth'});
 	}
+  function ScrollToAbout()
+	{
+		document.getElementById('about').scrollIntoView({block: 'start', behavior: 'smooth'});
+	}
 </script>
 <html lang="en">
 <!--Nav Bar-->
@@ -100,11 +104,10 @@ header video {
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
       <li class="nav-item"><a class="nav-link ms-3" href="javascript::javascript:void(0)" onClick="ScrollToProjects()">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
       <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown1"><a class="dropdown-item" href="https://twitter.com/flinn_fraher" target="_blank" rel="noopener noreferrer">Twitter</a><a class="dropdown-item" href="https://www.linkedin.com/in/flinn-fraher-927045186/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="dropdown-item" href="mailto:flinn.fraher@gmail.com">Email</a><a class="dropdown-item" href="https://github.com/flinn-fraher" target="_blank" rel="noopener noreferrer">GitHub</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">CV</a></div>
+          <a class="dropdown-item" href="documents\CV - Flinn Fraher.pdf">CV</a></div>
       </li>
     </ul>
   </div>
@@ -155,7 +158,7 @@ header video {
 <body>
 <hr class="my-4">
 <div class="container-fluid">
-  <h1 class="display-3 text-center">About</h1>
+  <h1 class="display-3 text-center" id="about">About</h1>
   <div class="container">
     <p class="lead text-center">Hello! I'm Flinn Fraher, a techncial games designer with strong programming and scripting skills. <br>
       I'm currently in my final year at Staffordshire University, studying Games Design and Programming. <br>
@@ -312,7 +315,10 @@ header video {
 		      <div id="collapseOne3" class="collapse" role="tabpanel" aria-labelledby="headingOne3" data-parent="#accordion4">
 		        <div class="card-body">
 				  <h5 class="text-left">What I Learned:</h5>
-					
+					  <p class = "text-left">
+              Development of this project took place during a week of the Summer Slow Jam in 2021, and was my second ever experience taking part in a games jam. Being responsible for creating some of the game's core mechanics, I used rapid prototyping techniques to ensure that
+              team members were able to have working mechanics to test and iterate on as soon as possible in the given week.
+            </p>
 				  <h5 class="text-left">Links:</h5>
 					<a href="https://www.youtube.com/watch?v=wcA7hsRUxQ4" target="_blank" rel="noopener noreferrer">Trailer</a><br>
 					<a href="https://youtu.be/NouugnnMv5A" target="_blank" rel="noopener noreferrer">Gameplay Walkthrough</a>
@@ -407,7 +413,6 @@ header video {
           <li>Levelling manager, with ability selection choices upon levelling up</li>
           <li>Three unique boss fights</li>
         </ul>
-		  
 	    <div id="accordion7" role="tablist">
 		    <div class="card">
 		      <div class="card-header" role="tab" id="headingOne5">
@@ -415,8 +420,6 @@ header video {
 	          </div>
 		      <div id="collapseOne5" class="collapse" role="tabpanel" aria-labelledby="headingOne5" data-parent="#accordion7">
 		        <div class="card-body">
-					<h5 class="text-left">What I Learned:</h5>
-					
 				  <h5 class="text-left">Links:</h5>
 				  <a href="PDFs/The Last Templar - GDD.pdf">Games Design Document</a><br>
 				  <a href="https://youtu.be/p0XoSkM8x9w" target="_blank" rel="noopener noreferrer">Trailer</a><br>
@@ -450,7 +453,13 @@ header video {
 		      <div id="collapseOne8" class="collapse" role="tabpanel" aria-labelledby="headingOne8" data-parent="#accordion8">
 		        <div class="card-body">
 					<h5 class="text-left">What I Learned:</h5>
-					
+					<p class = "text-left">
+            As well as being my introduction to Unreal Engine, this project served as an introduction to the importance of testing during development. When making major changes to the map's structure, I used allocated testing sessions with peers to play the map
+            and a quantitative survey to get feedback on key elements of gameplay - using this data, I could evaluate changes I'd made between testing sessions and inform future development based on it.
+            <br><br>
+            With such a large suite of assets being available from the Unreal Tournament SDK, this project helped me understand the importance of project management. I spent a lot of time learning the best ways to navigate the engine with content browser filters,
+            as well as understanding how to manage assets that require modification to work in desired ways - adjusting a mesh's pivot inside a modelling suite, or modifying blueprint-based parameters of actors to meet my design needs. 
+          </p>
 				  <h5 class="text-left">Links:</h5>
 				  <a href="https://youtu.be/FajNFbuK9cY" target="_blank" rel="noopener noreferrer">Cinematic Trailer</a>
 				  </div>
